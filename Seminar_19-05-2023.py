@@ -89,11 +89,9 @@ print(y)
 print(z)
 """
 
-
 boy1 = int(input("Введите рост 1 мальчика: "))
 boy2 = int(input("Введите рост 2 мальчика: "))
 boy3 = int(input("Введите рост 3 мальчика: "))
-
 if boy1 > boy2 and boy1 > boy3 and boy2 > boy3:
     inline1 = boy1
     inline2 = boy2
@@ -106,8 +104,6 @@ elif boy3 > boy2 and boy3 > boy1 and boy2 > boy1:
     inline1 = boy3
     inline2 = boy2
     inline3 = boy1
-
 print(inline1) 
 print(inline2)
 print(inline3)
-
