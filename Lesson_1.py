@@ -8,6 +8,7 @@ print(c)
 print(type(c))
 
 
+
 """ print("Введите строку: ")
 a = input()
 b = input('Введите второе число: ')
