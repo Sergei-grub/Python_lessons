@@ -11,7 +11,8 @@
 Пользователь вводит 2 числа. n - кол-во элементов первого множества. m - кол-во
 элементов второго множества. Затем пользователь вводит сами элементы множеств.
 """
-def list_join(list1, list2):
+
+""" def list_join(list1, list2):
     list_out = []
     for i in list1:  
         if i not in list_out:  
@@ -43,10 +44,7 @@ for i in range(num_2):
 print('\nСпасибо!\n\n')
 list_end = list_join(list_1, list_2)
 list_sort(list_end)
-print(list_end) 
-
-
-
+print(list_end)  """
 
 
 """ 
@@ -64,3 +62,18 @@ print(list_end)
 собрать за один заход собирающий модуль, находясь перед некоторым кустом
 заданной во входном файле грядки. 
 """
+
+num = int(input('Укажите число кустов: '))
+plants = {}
+for i in range(num):
+    plants[i] = int(
+        input(f'Укажите число ягод для {i+1} куста: '))
+pl = []
+for k, v in plants.items():
+    if k < 1:
+        pl.append(plants[num-1] + v + (plants[k+1]))
+    elif k == num-1:
+        pl.append(plants[k-1] + k + (plants[num-num]))
+    else:
+        pl.append(plants[k] + plants[k-1] + (plants[k+1]))
+print(f'Максимальное число ягод за подход модуля:', max(pl))
