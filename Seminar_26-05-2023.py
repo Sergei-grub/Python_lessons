@@ -86,8 +86,8 @@ print(number) """
 Input: [1, 1, 2, 0, -1, 3, 4, 4]
 Output: 6 """
 
-""" number = [1,1,2,0,-1,3,4,4]
-print(len(set(number))) """
+number = [1,1,2,0,-1,3,4,4]
+print(len(set(number)))
 
 """ lst =  [1, 1, 2, 0, -1, 3, 4, 4]
 # print(len(set(lst)))
@@ -157,5 +157,3 @@ print(f"Элементов массива, больших предыдущего
 print(len([i for i in range(len(lst) - 1) if lst[i] < lst[i + 1]])) """
 
 
-for i in 5,:
-    print(i)

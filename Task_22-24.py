@@ -11,21 +11,39 @@
 Пользователь вводит 2 числа. n - кол-во элементов первого множества. m - кол-во
 элементов второго множества. Затем пользователь вводит сами элементы множеств.
 """
-num_1 = int(input('Введите количество элементов первого множества: '))
-num_2 = int(input('Введите количество элементов второго множества: '))
-list_1 = [num_1]
-list_2 = [num_2]
+def list_join(list1, list2):
+    list_out = []
+    for i in list1:  
+        if i not in list_out:  
+            list_out.append(i)
+    for i in list2:  
+        if i not in list_out:  
+            list_out.append(i)
+    return list_out
 
+def list_sort(list):
+    temp = 0
+    for i in list:
+        for j in range(len(list) - 1):
+            if list[j] > list[j + 1]:
+                temp = list[j + 1]
+                list[j + 1] = list[j]
+                list[j] = temp
+    return list
+
+num_1 = int(input('Введите количество элементов 1 множества: '))
+num_2 = int(input('Введите количество элементов 2 множества: '))
+list_1 = []
+list_2 = []
 for i in range(num_1):
-    list_1.append(int(input('Введите элемент для первого множества: ')))
-print(list_1)
-print('Спасибо!')
+    list_1.append(int(input('Введите элемент для 1 множества: ')))
+print('\nСпасибо!\n')
 for i in range(num_2):
-    list_2.append(int(input('Введите элемент для второго множества: ')))
-print(list_2)
-
-
-
+    list_2.append(int(input('Введите элемент для 2 множества: ')))
+print('\nСпасибо!\n\n')
+list_end = list_join(list_1, list_2)
+list_sort(list_end)
+print(list_end) 
 
 
 
