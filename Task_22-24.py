@@ -32,7 +32,7 @@ def list_sort(list):
     return list
 
 num_1 = int(input('Введите количество элементов 1 множества: '))
-num_2 = int(input('Введите количество элементов 2 множества: '))
+num_2 = int(input('Введите количество элементов 23 множества: '))
 list_1 = []
 list_2 = []
 for i in range(num_1):
