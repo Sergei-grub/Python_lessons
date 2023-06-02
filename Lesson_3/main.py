@@ -1,3 +1,5 @@
+# Лекция 2 Python. Функции, рекурсия, алгоритмы
+
 # import modul1
 # from modul1 import max1
 # from modul1 import *
