@@ -8,7 +8,17 @@ A = 3; B = 5 -> 243 (3⁵)
 A = 2; B = 3 -> 8
 """
 
+""" def rank(a, b):
+    if b == 0:
+        return 1
+    else:
+        return a * rank(a, b - 1)
 
+    
+a = int(input('Введите число: '))
+b = int(input('Введите степень числа: '))
+print(rank(a, b))
+ """
 
 """ 
 Задача 28: Напишите рекурсивную функцию sum(a, b),
