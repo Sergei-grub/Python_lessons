@@ -173,6 +173,6 @@ if same_by(lambda x: x % 2, values):
 else:
     print('different') """
 
-x = 1023 
-y = x % 1003
+ 
+y = 1000 % 3
 print(y)
