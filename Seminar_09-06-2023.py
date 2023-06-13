@@ -51,6 +51,9 @@ for n, day in enumerate(week, 1):
     print(n, "-", day) """
 
 
+# ///////////////////////////////////////////////////////////////
+
+
 """ Задача №47. Решение в группах
 У вас есть код, который вы не можете менять (так часто бывает, когда код в глубине
 программы используется множество раз и вы не хотите ничего сломать):
@@ -71,6 +74,10 @@ if values == transformed_values:
     print('ok')
 else:
     print('fail') """
+
+
+# ///////////////////////////////////////////////////////////////
+
 
 
 """ Задача №49. Решение в группах
@@ -113,28 +120,18 @@ find_farthest_orbit(list_of_orbits), которая среди списка ор
 
 
 orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
-print(find_farthest_orbit(orbits))
- """
+print(find_farthest_orbit(orbits)) """
 
 
 
-""" def find_farthest_orbit(lst):
-    square_orbits = [int(3.14 * val[0] * val[1]) for val in lst if val[0] != val [1]]
-    max_index = square_orbits.index(max(square_orbits))
-    return lst[max_index]
 
-    
-orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
-print(*find_farthest_orbit(orbits)) """
+""" orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+res = [i for i in orbits if i[0] != i[1]]
+res2 = max(res, key=lambda x: 3.14 * x[0] * x[1])
+print(res2) """
 
 
-""" def find_farthest_orbit(orbits):
-    lst_without_circles = [i for i in orbits if i[0] != i[1]]
-    return max(lst_without_circles, key=lambda x: 3.14 * x[0] * x[1])
-
-
-orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
-print(*find_farthest_orbit(orbits)) """
+# ///////////////////////////////////////////////////////////////
 
 
 """ Задача №51. Решение в группах
@@ -150,12 +147,29 @@ print(*find_farthest_orbit(orbits)) """
 Ввод: 
 values = [0, 2, 10, 6] 
 if same_by(lambda x: x % 2, values):
-    print(‘same’)
+    print('same')
 else:
-print(‘different’) 
+print('different') 
 
 Вывод: same
 """
+
+def same_by(characteristic, objects):
+    if len(objects) == 0:
+        return True
+    else:
+        fst = characteristic(objects[0])
+        lst = [characteristic(i) == fst for i in objects]
+        print(fst, sum(lst), len(lst))
+        return (False, True)[sum(lst) == len(lst)]
+    
+values = [0, 2, 10, 6] 
+if same_by(lambda x: x % 2, values):
+    print('same')
+else:
+    print('different') 
+
+
 
 
 
@@ -167,12 +181,9 @@ print(‘different’)
     return (False, True)[len(lst) == sum(lst)]
 
 
-values = [0, 2, 10, 6, 5]
+values = [0, 2, 10, 6]
 if same_by(lambda x: x % 2, values):
     print('same')
 else:
-    print('different') """
-
- 
-y = 1000 % 3
-print(y)
+    print('different')
+ """
