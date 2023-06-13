@@ -37,6 +37,24 @@
 rifma = 'пара-ра-рам рам-пам-папам па-ра-па-да'
 print(help(rifma)) """
 
+# Эталонное решение
+
+def count_vowels(text: str) -> int:
+    vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ"
+    count = 0
+    for char in text:
+        if char in vowels:
+            count += 1
+    return count
+
+
+result = list(map(lambda s: count_vowels(s), input('Введите фразу: ').split()))
+print(result)
+if len(set(result)) == 1: 
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
+
 
 # ///////////////////////////////////////////////////////////////
 
@@ -60,11 +78,11 @@ print(help(rifma)) """
 6 12 18 24 30 36 """
 
 
-def print_operation_table(operation, num_rows, num_columns):
+""" def print_operation_table(operation, num_rows, num_columns):
     for i in range(1, num_rows + 1):
         print()
         for j in range(1, num_columns + 1):
             print(operation(i,j), end='\t')
 
 num_rows, num_columns = 6, 6
-print_operation_table(lambda x, y: x*y, num_rows, num_columns)
+print_operation_table(lambda x, y: x*y, num_rows, num_columns) """
