@@ -42,9 +42,9 @@ math(lambda a, b:  a + b, 5, 45) """
 
 
 """ def retrn(lst):
-    return [(i, i ** 2) for i in lst if i % 2 == 0]
+    return ['slss' for i in lst if i % 2 == 0]
 
-lst = [1,2,3,5,8,15,23,38]
+lst = [1,2,3,5,8,15,23,38, 44]
 print(retrn(lst)) """
 
 
@@ -166,9 +166,9 @@ print(56) """
 # ///////////////////////////////////////////////////////////////
 
 
-path = 'file.txt'
+""" path = 'file.txt'
 data = open('file.txt', 'r')
 for line in data:
     print(line)
 
-data.close()
+data.close() """
