@@ -167,23 +167,4 @@ values = [0, 2, 10, 6]
 if same_by(lambda x: x % 2, values):
     print('same')
 else:
-    print('different') 
-
-
-
-
-
-""" def same_by(characteristic, objects):
-    if len(objects) == 0:
-        return True
-    first = characteristic(objects[0])
-    lst = [characteristic(i) == first for i in objects]  
-    return (False, True)[len(lst) == sum(lst)]
-
-
-values = [0, 2, 10, 6]
-if same_by(lambda x: x % 2, values):
-    print('same')
-else:
     print('different')
- """
